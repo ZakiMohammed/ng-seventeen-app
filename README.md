@@ -1,27 +1,72 @@
-# SeventeenApp
+# SevenTeen App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.3.
+App for exploring Angular v17 features.
 
-## Development server
+## Run App
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Below command will run the project:
 
-## Code scaffolding
+```
+npm start
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Initial Setup
 
-## Build
+Below command executed to perform initial setup:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```
+ng new seventeen-app
+```
 
-## Running unit tests
+## Dependencies
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Below packages are added:
 
-## Running end-to-end tests
+```
+npm i bootstrap
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### FontAwesome
 
-## Further help
+Read the documentation from here:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+https://github.com/FortAwesome/angular-fontawesome/blob/HEAD/docs/usage.md
+
+```
+npm install @fortawesome/fontawesome-svg-core
+npm install @fortawesome/free-solid-svg-icons
+npm install @fortawesome/free-brands-svg-icons
+npm install @fortawesome/free-regular-svg-icons
+npm install @fortawesome/angular-fontawesome@latest
+```
+
+Import FontAwesomeModule to AppModule:
+
+We are following the "Icon Library" approach: 
+https://github.com/FortAwesome/angular-fontawesome/blob/a20496d424c64478130c95f822fcbb23da0b5b8b/docs/usage/icon-library.md.
+
+```
+import { Component } from '@angular/core';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [FontAwesomeModule],
+  templateUrl: './app.component.html',
+})
+export class AppComponent {
+  constructor(library: FaIconLibrary) {
+    // Add an icon to the library for convenient access in other components
+    library.addIcons(faCoffee);
+  }
+}
+```
+
+Usage:
+
+```
+<fa-icon icon="coffee"></fa-icon>
+<fa-icon [icon]="['fab', 'angular']" size="lg"></fa-icon>
+```
