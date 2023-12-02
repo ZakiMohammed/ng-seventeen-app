@@ -11,14 +11,20 @@
         <div class="collapse navbar-collapse" id="navContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" [routerLink]="['/']" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }">
-                        <fa-icon [icon]="['fas', 'home']" class="text-secondary pe-1"></fa-icon>
+                    <a class="nav-link" aria-current="page" [routerLink]="['/']" [routerLinkActive]="'text-success'" [routerLinkActiveOptions]="{ exact: true }">
+                        <fa-icon [icon]="['fas', 'home']" class="pe-1"></fa-icon>
                         Home
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" [routerLink]="['/about']" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }">
-                        <fa-icon [icon]="['fas', 'heart']" class="text-secondary pe-1"></fa-icon>
+                    <a class="nav-link" [routerLink]="['/users']" [routerLinkActive]="'text-success'" [routerLinkActiveOptions]="{ exact: true }">
+                        <fa-icon [icon]="['fas', 'user-astronaut']" class="pe-1"></fa-icon>
+                        Users
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/about']" [routerLinkActive]="'text-success'" [routerLinkActiveOptions]="{ exact: true }">
+                        <fa-icon [icon]="['fas', 'heart']" class="pe-1"></fa-icon>
                         About
                     </a>
                 </li>
