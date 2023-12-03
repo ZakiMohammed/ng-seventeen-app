@@ -8,10 +8,9 @@ describe('BrandIconComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BrandIconComponent]
-    })
-    .compileComponents();
-    
+      imports: [BrandIconComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(BrandIconComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

@@ -1,9 +1,31 @@
-<div class="list-group">
-    @for (user of users$ | async; track user.id) {
-        <div class="list-group-item">
-            {{user.name}}
+<app-page-title pageTitle="Users" [pageIcon]="['fas', 'user-astronaut']" />
+
+@if (users$ | async; as users) {
+  @for (user of users; track user.id) {
+    <div class="card text-bg-light rounded-4 border-0 mb-3 cursor-pointer" (click)="goToDetails(user.id)">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-4 col-sm-2 col-xxl-1">
+            <img [src]="'https://i.pravatar.cc/100?img=' + user.id" [alt]="user.username" class="img-fluid rounded-circle" />
+          </div>
+          <div class="col-6 col-sm-8 col-xxl-10">
+            <h4 class="card-title">{{ user.name | titlecase }}</h4>
+            <p class="card-text">
+              <span class="d-block mb-2"><fa-icon [icon]="['far', 'envelope']" class="text-secondary"></fa-icon> {{ user.email }}</span>
+              <span class="d-block"><fa-icon [icon]="['fas', 'user-astronaut']" class="text-secondary"></fa-icon> {{ user.username }}</span>
+            </p>
+          </div>
+          <div class="col-2 col-sm-2 col-xxl-1">
+            <div class="d-flex h-100 justify-content-center align-items-center">
+              <fa-icon [icon]="['fas', 'chevron-right']" size="xl" class="text-success"></fa-icon>
+            </div>
+          </div>
         </div>
-    } @empty {
-        <div class="list-group-item">No Records Found</div>
-    }
-</div>
+      </div>
+    </div>
+  } @empty {
+    <div>No Records Found</div>
+  }
+} @else {
+  <app-loader />
+}

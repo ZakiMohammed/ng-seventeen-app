@@ -8,10 +8,9 @@ describe('PageTitleComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PageTitleComponent]
-    })
-    .compileComponents();
-    
+      imports: [PageTitleComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(PageTitleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

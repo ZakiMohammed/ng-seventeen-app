@@ -6,8 +6,6 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './notfound.component.html',
-  styleUrl: './notfound.component.scss'
+  styleUrl: './notfound.component.scss',
 })
-export class NotfoundComponent {
-
-}
+export class NotfoundComponent {}

@@ -1,34 +1,53 @@
 <nav class="navbar navbar-expand-md bg-body-tertiary">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-            <app-brand-icon />
-            SevenTeen
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent"
-            aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" [routerLink]="['/']" [routerLinkActive]="'text-success'" [routerLinkActiveOptions]="{ exact: true }">
-                        <fa-icon [icon]="['fas', 'home']" class="pe-1"></fa-icon>
-                        Home
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" [routerLink]="['/users']" [routerLinkActive]="'text-success'" [routerLinkActiveOptions]="{ exact: true }">
-                        <fa-icon [icon]="['fas', 'user-astronaut']" class="pe-1"></fa-icon>
-                        Users
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" [routerLink]="['/about']" [routerLinkActive]="'text-success'" [routerLinkActiveOptions]="{ exact: true }">
-                        <fa-icon [icon]="['fas', 'heart']" class="pe-1"></fa-icon>
-                        About
-                    </a>
-                </li>
-            </ul>
-        </div>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <app-brand-icon />
+      SevenTeen
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navContent"
+      aria-controls="navContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            aria-current="page"
+            [routerLink]="['/']"
+            [routerLinkActive]="'text-success'"
+            [routerLinkActiveOptions]="{ exact: true }">
+            <fa-icon [icon]="['fas', 'home']" class="pe-1"></fa-icon>
+            Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="['/users']"
+            [routerLinkActive]="'text-success'"
+            [routerLinkActiveOptions]="{ exact: false }">
+            <fa-icon [icon]="['fas', 'user-astronaut']" class="pe-1"></fa-icon>
+            Users
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="['/about']"
+            [routerLinkActive]="'text-success'"
+            [routerLinkActiveOptions]="{ exact: false }">
+            <fa-icon [icon]="['fas', 'heart']" class="pe-1"></fa-icon>
+            About
+          </a>
+        </li>
+      </ul>
     </div>
+  </div>
 </nav>

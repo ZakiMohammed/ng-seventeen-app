@@ -7,8 +7,6 @@ import { BrandIconComponent } from '../brand-icon/brand-icon.component';
   standalone: true,
   imports: [CommonModule, BrandIconComponent],
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss'
+  styleUrl: './footer.component.scss',
 })
-export class FooterComponent {
-
-}
+export class FooterComponent {}

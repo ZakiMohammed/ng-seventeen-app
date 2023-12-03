@@ -42,7 +42,7 @@ npm install @fortawesome/angular-fontawesome@latest
 
 Import FontAwesomeModule to AppModule:
 
-We are following the "Icon Library" approach: 
+We are following the "Icon Library" approach:
 https://github.com/FortAwesome/angular-fontawesome/blob/a20496d424c64478130c95f822fcbb23da0b5b8b/docs/usage/icon-library.md.
 
 ```

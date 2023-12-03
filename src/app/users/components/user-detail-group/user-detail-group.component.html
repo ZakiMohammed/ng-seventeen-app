@@ -1,0 +1,65 @@
+<ul class="list-group rounded-4">
+  <li class="list-group-item list-group-item-light py-3"><strong class="text-secondary">Details</strong></li>
+  <li
+    appUserDetailItem
+    class="list-group-item d-flex justify-content-between"
+    text="Email"
+    [value]="user.email"
+    [icon]="['far', 'envelope']"></li>
+  <li
+    appUserDetailItem
+    class="list-group-item d-flex justify-content-between"
+    text="Username"
+    [value]="user.username"
+    [icon]="['fas', 'user-astronaut']"></li>
+  <li
+    appUserDetailItem
+    class="list-group-item d-flex justify-content-between"
+    text="Phone"
+    [value]="user.phone"
+    [icon]="['fas', 'phone']"></li>
+  <li
+    appUserDetailItem
+    class="list-group-item d-flex justify-content-between"
+    text="Website"
+    [value]="user.website"
+    [icon]="['fas', 'globe']"></li>
+  <li class="list-group-item list-group-item-light py-3"><strong class="text-secondary">Address</strong></li>
+  <li
+    appUserDetailItem
+    class="list-group-item d-flex justify-content-between"
+    text="Street"
+    [value]="user.address.street + ', ' + user.address.suite"
+    [icon]="['fas', 'street-view']"></li>
+  <li
+    appUserDetailItem
+    class="list-group-item d-flex justify-content-between"
+    text="City"
+    [value]="user.address.city"
+    [icon]="['fas', 'city']"></li>
+  <li
+    appUserDetailItem
+    class="list-group-item d-flex justify-content-between"
+    text="Zipcode"
+    [value]="user.address.zipcode"
+    [icon]="['fas', 'map-pin']"></li>
+  <li class="list-group-item list-group-item-light py-3"><strong class="text-secondary">Company</strong></li>
+  <li
+    appUserDetailItem
+    class="list-group-item d-flex justify-content-between"
+    text="Name"
+    [value]="user.company.name"
+    [icon]="['fas', 'industry']"></li>
+  <li
+    appUserDetailItem
+    class="list-group-item d-flex justify-content-between"
+    text="Catch Phrase"
+    [value]="user.company.catchPhrase"
+    [icon]="['fas', 'quote-right']"></li>
+    <li
+      appUserDetailItem
+      class="list-group-item d-flex justify-content-between"
+      text="Bs"
+      [value]="user.company.bs"
+      [icon]="['far', 'circle']"></li>
+</ul>
