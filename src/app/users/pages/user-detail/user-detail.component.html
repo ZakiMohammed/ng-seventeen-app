@@ -3,8 +3,24 @@
 @if (user$ | async; as user) {
   <div class="row">
     <div class="col-sm-4 col-xxl-3">
-      <img [src]="'https://i.pravatar.cc?img=' + user.id" [alt]="user.username" class="img-fluid rounded rounded-4 mb-3" />
-      <h3 class="mb-4">{{ user.name }}</h3>
+      <img
+        [src]="'https://i.pravatar.cc?img=' + user.id"
+        [alt]="user.username"
+        class="img-fluid rounded rounded-4 mb-3" />
+      <div class="mb-4">
+        <h3>{{ user.name }}</h3>
+        @switch (user.name) {
+          @case ('Leanne Graham') {
+            <span class="badge rounded-pill text-bg-dark">Admin</span>
+          }
+          @case ('Ervin Howell') {
+            <span class="badge rounded-pill text-bg-secondary">Worker</span>
+          }
+          @default {
+            <span class="badge rounded-pill text-bg-success">User</span>
+          }
+        }
+      </div>
     </div>
     <div class="col-sm-8 col-xxl-9">
       <app-user-detail-group [user]="user" />

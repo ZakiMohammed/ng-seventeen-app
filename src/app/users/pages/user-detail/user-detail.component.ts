@@ -15,7 +15,6 @@ import { PageTitleComponent } from '../../../core/components/page-title/page-tit
   imports: [CommonModule, FontAwesomeModule, LoaderComponent, PageTitleComponent, UserDetailGroupComponent],
   templateUrl: './user-detail.component.html',
   styleUrl: './user-detail.component.scss',
-  
 })
 export class UserDetailComponent implements OnInit {
   user$!: Observable<User>;
@@ -23,10 +22,9 @@ export class UserDetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private userService: UserService
-  ) {
-  }
+  ) {}
 
   ngOnInit(): void {
-    this.user$ = this.userService.getById(this.route.snapshot.params['id'])
+    this.user$ = this.userService.getById(this.route.snapshot.params['id']);
   }
 }

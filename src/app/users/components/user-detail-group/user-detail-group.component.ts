@@ -9,7 +9,7 @@ import { UserDetailItemComponent } from '../user-detail-item/user-detail-item.co
   standalone: true,
   imports: [CommonModule, FontAwesomeModule, UserDetailItemComponent],
   templateUrl: './user-detail-group.component.html',
-  styleUrl: './user-detail-group.component.scss'
+  styleUrl: './user-detail-group.component.scss',
 })
 export class UserDetailGroupComponent {
   @Input() user!: User;

@@ -20,7 +20,8 @@ export class UserListComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private userService: UserService) {}
+    private userService: UserService
+  ) {}
 
   ngOnInit(): void {
     this.users$ = this.userService.getAll();

@@ -8,7 +8,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   standalone: true,
   imports: [CommonModule, FontAwesomeModule],
   templateUrl: './user-detail-item.component.html',
-  styleUrl: './user-detail-item.component.scss'
+  styleUrl: './user-detail-item.component.scss',
 })
 export class UserDetailItemComponent {
   @Input() text!: string;
