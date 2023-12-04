@@ -2,7 +2,7 @@
 
 @if (user$ | async; as user) {
   <div class="row">
-    <div class="col-sm-4 col-xxl-3">
+    <div class="col-md-4 col-xxl-3">
       <img
         [src]="'https://i.pravatar.cc?img=' + user.id"
         [alt]="user.username"
@@ -22,8 +22,18 @@
         }
       </div>
     </div>
-    <div class="col-sm-8 col-xxl-9">
-      <app-user-detail-group [user]="user" />
+    <div class="col-md-8 col-xxl-9">
+      @defer {
+        <app-user-detail-group [user]="user" />
+      } @placeholder (minimum 500ms) {
+        <div class="alert alert-light" role="alert">
+          <div class="bg-body-secondary rounded w-25 mb-3" style="height: 2rem"></div>
+          <div class="bg-body-secondary rounded w-100 mb-2" style="height: 1.5rem"></div>
+          <div class="bg-body-secondary rounded w-75 mb-2" style="height: 1.5rem"></div>
+          <div class="bg-body-secondary rounded w-50 mb-2" style="height: 1.5rem"></div>
+          <div class="bg-body-secondary rounded w-100 mb-2" style="height: 1.5rem"></div>
+        </div>
+      }
     </div>
   </div>
 } @else {
