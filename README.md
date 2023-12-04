@@ -1,6 +1,10 @@
 # SevenTeen App
 
-App for exploring Angular v17 features.
+SevenTeen App is for exploring Angular v17 newly added features.
+
+Below shows list of some important features:
+
+- 
 
 ## Run App
 
@@ -16,6 +20,82 @@ Below command executed to perform initial setup:
 
 ```
 ng new seventeen-app
+```
+
+## Bundle Monitoring and Visualization
+
+For monitoring the bundle size and visualization of components we can use 2 packages:
+
+- Source Map Explorer
+- Vite Bundle Visualizer
+
+### 1. Source Map Explorer
+
+For source map explorer follow below steps:
+
+Install `source-map-explorer` as `devDependencies`:
+```
+npm i source-map-explorer -D
+```
+
+Add scripts in `package.json` file:
+```
+"scripts": {
+  "build:analyze": "ng build --configuration production --source-map",
+  "explorer": "npm run build:analyze && source-map-explorer dist/**/*.js"
+}
+```
+
+### 2. Vite Bundle Visualizer
+
+For `vite-bundle-visualizer` run below command after running the `build:analyze` command:
+
+```
+npx vite-bundle-visualizer --i C:\Zaki\Study\Angular\ng-seventeen-app\dist\seventeen-app\browser\index.html
+```
+
+## Prettier Formatter
+
+Create a Prettier ignore file `.prettierignore`:
+```
+package.json
+package-lock.json
+.eslintrc.json
+tsconfig.json
+dist
+/.angular/cache
+eslint/reports/**
+```
+
+Create a Prettier config file `.prettierc.json`:
+```
+{
+  "tabWidth": 2,
+  "useTabs": false,
+  "singleQuote": true,
+  "semi": true,
+  "bracketSpacing": true,
+  "arrowParens": "avoid",
+  "trailingComma": "es5",
+  "bracketSameLine": true,
+  "printWidth": 80,
+  "endOfLine": "auto",
+  "overrides": [
+    {
+      "files": ["*.html", "*.ts"],
+      "options": {
+        "printWidth": 120
+      }
+    },
+    {
+      "files": "*.js",
+      "options": {
+        "printWidth": 80
+      }
+    }
+  ]
+}
+
 ```
 
 ## Dependencies

@@ -48,7 +48,7 @@
               ],
               "outputHashing": "all",
               "optimization": true,
-              "namedChunks": true,
+              "namedChunks": false,
               "aot": true
             },
             "development": {
