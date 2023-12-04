@@ -11,4 +11,8 @@ import { BrandIconComponent } from '../brand-icon/brand-icon.component';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  navbarCollapse() {
+    document.getElementById('navContent')?.classList.remove('show');
+  }
+}

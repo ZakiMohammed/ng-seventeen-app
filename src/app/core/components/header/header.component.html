@@ -22,7 +22,8 @@
             aria-current="page"
             [routerLink]="['/']"
             [routerLinkActive]="'text-success'"
-            [routerLinkActiveOptions]="{ exact: true }">
+            [routerLinkActiveOptions]="{ exact: true }"
+            (click)="navbarCollapse()">
             <fa-icon [icon]="['fas', 'home']" class="pe-1"></fa-icon>
             Home
           </a>
@@ -32,7 +33,8 @@
             class="nav-link"
             [routerLink]="['/users']"
             [routerLinkActive]="'text-success'"
-            [routerLinkActiveOptions]="{ exact: false }">
+            [routerLinkActiveOptions]="{ exact: false }"
+            (click)="navbarCollapse()">
             <fa-icon [icon]="['fas', 'user-astronaut']" class="pe-1"></fa-icon>
             Users
           </a>
@@ -42,7 +44,8 @@
             class="nav-link"
             [routerLink]="['/about']"
             [routerLinkActive]="'text-success'"
-            [routerLinkActiveOptions]="{ exact: false }">
+            [routerLinkActiveOptions]="{ exact: false }"
+            (click)="navbarCollapse()">
             <fa-icon [icon]="['fas', 'heart']" class="pe-1"></fa-icon>
             About
           </a>

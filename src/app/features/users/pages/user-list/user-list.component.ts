@@ -5,8 +5,8 @@ import { Observable } from 'rxjs';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { Router } from '@angular/router';
 import { User } from '../../models/user';
-import { LoaderComponent } from '../../../core/components/loader/loader.component';
-import { PageTitleComponent } from '../../../core/components/page-title/page-title.component';
+import { LoaderComponent } from '../../../../core/components/loader/loader.component';
+import { PageTitleComponent } from '../../../../core/components/page-title/page-title.component';
 
 @Component({
   selector: 'app-user-list',
