@@ -2,9 +2,16 @@
 
 SevenTeen App is for exploring Angular v17 newly added features.
 
-Below shows list of some important features:
+Below shows list of new features:
 
-- 
+- Standalone (full project)
+- Standalone Migration
+- Control flows - @for, @if, @switch
+- Deferrable Views
+- Signals
+- SSR and SSG
+- Optimizing Images
+- New Lifecycle Hooks
 
 ## Run App
 
