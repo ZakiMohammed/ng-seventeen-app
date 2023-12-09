@@ -10,7 +10,6 @@ Below shows list of new features:
 - Deferrable Views
 - Signals
 - SSR and SSG
-- Optimizing Images
 - New Lifecycle Hooks
 
 ## Run App

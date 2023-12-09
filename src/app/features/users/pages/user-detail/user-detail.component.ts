@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { UserService } from '../../services/user.service';
 import { Observable } from 'rxjs';
@@ -12,7 +12,14 @@ import { PageTitleComponent } from '../../../../core/components/page-title/page-
 @Component({
   selector: 'app-user-detail',
   standalone: true,
-  imports: [CommonModule, FontAwesomeModule, LoaderComponent, PageTitleComponent, UserDetailGroupComponent],
+  imports: [
+    CommonModule,
+    FontAwesomeModule,
+    NgOptimizedImage,
+    LoaderComponent,
+    PageTitleComponent,
+    UserDetailGroupComponent,
+  ],
   templateUrl: './user-detail.component.html',
   styleUrl: './user-detail.component.scss',
 })

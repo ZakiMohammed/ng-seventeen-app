@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { UserService } from '../../services/user.service';
 import { Observable } from 'rxjs';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -11,7 +11,7 @@ import { PageTitleComponent } from '../../../../core/components/page-title/page-
 @Component({
   selector: 'app-user-list',
   standalone: true,
-  imports: [CommonModule, FontAwesomeModule, LoaderComponent, PageTitleComponent],
+  imports: [CommonModule, FontAwesomeModule, NgOptimizedImage, LoaderComponent, PageTitleComponent],
   templateUrl: './user-list.component.html',
   styleUrl: './user-list.component.scss',
 })
