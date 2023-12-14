@@ -5,13 +5,13 @@ import { Observable } from 'rxjs';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { Router } from '@angular/router';
 import { User } from '../../models/user';
-import { LoaderComponent } from '../../../../core/components/loader/loader.component';
 import { PageTitleComponent } from '../../../../core/components/page-title/page-title.component';
+import { PageLoaderComponent } from '../../../../core/components/page-loader/page-loader.component';
 
 @Component({
   selector: 'app-user-list',
   standalone: true,
-  imports: [CommonModule, FontAwesomeModule, NgOptimizedImage, LoaderComponent, PageTitleComponent],
+  imports: [CommonModule, FontAwesomeModule, NgOptimizedImage, PageLoaderComponent, PageTitleComponent],
   templateUrl: './user-list.component.html',
   styleUrl: './user-list.component.scss',
 })
