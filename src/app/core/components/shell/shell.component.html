@@ -1,0 +1,11 @@
+<app-header />
+
+<div class="container my-5">
+  <router-outlet></router-outlet>
+</div>
+
+<app-footer />
+
+@if (loader()) {
+  <app-loader />
+}

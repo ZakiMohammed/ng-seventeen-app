@@ -12,6 +12,20 @@ Below shows list of new features:
 - SSR and SSG
 - New Lifecycle Hooks
 
+TODO:
+
+- Add shell and login [Done]
+- Add guard and API call
+- Add Bootstrap Icon and replace with FA
+- Add ESLint with Prettier rule
+- Add environment files
+- Folder Structure
+- Budgeting
+- Add global toaster
+- API caching
+- HTTP interceptor
+- Azure App Insight
+
 ## Run App
 
 Below command will run the project:
