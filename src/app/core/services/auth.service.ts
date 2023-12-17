@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { User } from '../../features/users/models/user';
 import { map, of } from 'rxjs';
 import { Router } from '@angular/router';
+import { MESSAGE_CONSTANTS } from '../constants/message.constant';
 
 @Injectable({
   providedIn: 'root',
@@ -10,7 +11,10 @@ import { Router } from '@angular/router';
 export class AuthService {
   private baseUrl = 'https://jsonplaceholder.typicode.com/users/';
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(
+    private http: HttpClient,
+    private router: Router,
+  ) {}
 
   public get User() {
     try {
@@ -18,7 +22,9 @@ export class AuthService {
       if (item) {
         return JSON.parse(item) as User;
       }
-    } catch (error) {}
+    } catch {
+      console.log(MESSAGE_CONSTANTS.NO_USER);
+    }
     return null;
   }
 
@@ -33,13 +39,13 @@ export class AuthService {
 
   login(username: string, password: string) {
     return this.http.get<User[]>(this.baseUrl).pipe(
-      map(users => {
-        const user = users.find(u => u.username === username && u.email === password);
+      map((users) => {
+        const user = users.find((u) => u.username === username && u.email === password);
         if (user) {
           localStorage.setItem('user', JSON.stringify(user));
         }
         return user;
-      })
+      }),
     );
   }
 
@@ -49,6 +55,6 @@ export class AuthService {
     }
 
     const url = `${this.baseUrl}${this.User?.id}`;
-    return this.http.get<User>(url).pipe(map(user => !!user));
+    return this.http.get<User>(url).pipe(map((user) => !!user));
   }
 }

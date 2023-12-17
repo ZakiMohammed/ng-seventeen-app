@@ -2,7 +2,11 @@
 
 @if (users$ | async; as users) {
   @for (user of users; track user.id) {
-    <div class="card text-bg-light rounded-4 border-0 mb-3 cursor-pointer" (click)="goToDetails(user.id)">
+    <div
+      class="card text-bg-light rounded-4 border-0 mb-3 cursor-pointer"
+      (click)="goToDetails(user.id)"
+      role="button"
+      aria-disabled="true">
       <div class="card-body">
         <div class="row">
           <div class="col-4 col-sm-2 col-xxl-1">

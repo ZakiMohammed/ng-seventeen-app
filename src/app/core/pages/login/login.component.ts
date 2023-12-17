@@ -31,7 +31,7 @@ export class LoginComponent {
     }
 
     this.loaderService.show();
-    this.authService.login(this.username, this.password).subscribe(user => {
+    this.authService.login(this.username, this.password).subscribe((user) => {
       if (user) {
         this.router.navigate(['/']);
       } else {

@@ -4,7 +4,7 @@ import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
-  selector: '[appUserDetailItem]',
+  selector: 'app-user-detail-item',
   standalone: true,
   imports: [CommonModule, FontAwesomeModule],
   templateUrl: './user-detail-item.component.html',

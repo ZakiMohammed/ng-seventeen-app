@@ -9,5 +9,4 @@ import { BrandIconComponent } from '../../components/brand-icon/brand-icon.compo
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
-export class HomeComponent {
-}
+export class HomeComponent {}

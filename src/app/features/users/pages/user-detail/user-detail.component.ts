@@ -28,10 +28,10 @@ export class UserDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private userService: UserService
+    private userService: UserService,
   ) {}
 
   ngOnInit(): void {
-    this.user$ = this.userService.getById(this.route.snapshot.params['id']).pipe(catchError(() => of(null)));;
+    this.user$ = this.userService.getById(this.route.snapshot.params['id']).pipe(catchError(() => of(null)));
   }
 }

@@ -9,7 +9,7 @@ export const httpInterceptor: HttpInterceptorFn = (req, next) => {
   const authService = inject(AuthService);
   const toastService = inject(ToastrService);
 
-  return next(req).pipe(catchError(err => handleAuthError(err, authService, toastService)));
+  return next(req).pipe(catchError((err) => handleAuthError(err, authService, toastService)));
 };
 
 const handleAuthError = (err: HttpErrorResponse, authService: AuthService, toastService: ToastrService) => {

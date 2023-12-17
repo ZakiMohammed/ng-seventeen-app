@@ -11,6 +11,4 @@ import { HeaderComponent } from '../header/header.component';
   templateUrl: './shell.component.html',
   styleUrl: './shell.component.scss',
 })
-export class ShellComponent {
-  
-}
+export class ShellComponent {}

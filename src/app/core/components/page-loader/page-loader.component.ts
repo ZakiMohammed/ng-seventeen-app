@@ -7,8 +7,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   standalone: true,
   imports: [CommonModule, FontAwesomeModule],
   templateUrl: './page-loader.component.html',
-  styleUrl: './page-loader.component.scss'
+  styleUrl: './page-loader.component.scss',
 })
-export class PageLoaderComponent {
-
-}
+export class PageLoaderComponent {}

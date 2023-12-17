@@ -10,8 +10,10 @@
     "watch": "ng build --watch --configuration development",
     "watch:prod": "ng build --watch --configuration production",
     "test": "ng test",
-    "prettier": "prettier --config .prettierc.json --write .",
-    "explorer": "npm run build:analyze && source-map-explorer dist/**/*.js"
+    "prettier": "prettier --config .prettierrc.json --write .",
+    "explorer": "npm run build:analyze && source-map-explorer dist/**/*.js",
+    "lint": "ng lint",
+    "lint-html": "ng lint > eslint/report.html --format html --silent"
   },
   "private": true,
   "dependencies": {
@@ -36,16 +38,26 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^17.0.3",
+    "@angular-eslint/builder": "17.1.1",
+    "@angular-eslint/eslint-plugin": "17.1.1",
+    "@angular-eslint/eslint-plugin-template": "17.1.1",
+    "@angular-eslint/schematics": "17.1.1",
+    "@angular-eslint/template-parser": "17.1.1",
     "@angular/cli": "^17.0.3",
     "@angular/compiler-cli": "^17.0.0",
     "@types/jasmine": "~5.1.0",
+    "@typescript-eslint/eslint-plugin": "6.13.1",
+    "@typescript-eslint/parser": "6.13.1",
+    "eslint": "^8.54.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.0.1",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
-    "prettier": "^3.1.0",
+    "prettier": "3.1.1",
     "source-map-explorer": "^2.5.3",
     "typescript": "~5.2.2"
   }

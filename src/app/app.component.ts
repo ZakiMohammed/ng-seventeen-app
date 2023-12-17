@@ -29,7 +29,7 @@ export class AppComponent {
   constructor(
     library: FaIconLibrary,
     private loaderService: LoaderService,
-    private router: Router
+    private router: Router,
   ) {
     library.addIconPacks(fas, far, fab);
     this.loader = loaderService.loader;

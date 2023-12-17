@@ -3,11 +3,11 @@ import { CanActivateFn } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { catchError, map, of } from 'rxjs';
 
-export const authGuard: CanActivateFn = (route, state) => {
+export const authGuard: CanActivateFn = () => {
   const authService = inject(AuthService);
 
   return authService.authorized().pipe(
-    map(result => {
+    map((result) => {
       if (result) {
         return true;
       } else {
@@ -15,6 +15,6 @@ export const authGuard: CanActivateFn = (route, state) => {
         return false;
       }
     }),
-    catchError(error => of(false))
+    catchError(() => of(false)),
   );
 };

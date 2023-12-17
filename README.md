@@ -19,13 +19,13 @@ TODO:
 - Add toaster [Done]
 - HTTP interceptor [Done]
 - Add global toaster [Done]
-- Add Bootstrap Icon and replace with FA
-- Add ESLint with Prettier rule
+- Add ESLint with Prettier rule [Done]
 - Add environment files
 - Folder Structure
 - Budgeting
 - API caching
 - Azure App Insight
+- Add Bootstrap Icon and replace with FA
 
 ## Run App
 
@@ -55,11 +55,13 @@ For monitoring the bundle size and visualization of components we can use 2 pack
 For source map explorer follow below steps:
 
 Install `source-map-explorer` as `devDependencies`:
+
 ```
 npm i source-map-explorer -D
 ```
 
 Add scripts in `package.json` file:
+
 ```
 "scripts": {
   "build:analyze": "ng build --configuration production --source-map",
@@ -78,6 +80,7 @@ npx vite-bundle-visualizer --i C:\Zaki\Study\Angular\ng-seventeen-app\dist\seven
 ## Prettier Formatter
 
 Create a Prettier ignore file `.prettierignore`:
+
 ```
 package.json
 package-lock.json
@@ -89,6 +92,7 @@ eslint/reports/**
 ```
 
 Create a Prettier config file `.prettierc.json`:
+
 ```
 {
   "tabWidth": 2,

@@ -4,4 +4,4 @@ package-lock.json
 tsconfig.json
 dist
 /.angular/cache
-eslint/reports/**
+eslint
