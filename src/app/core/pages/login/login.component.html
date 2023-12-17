@@ -11,7 +11,10 @@
             width="600" />
         </div>
         <div class="col-md-6 align-self-center">
-          <h2 class="card-title mb-3 text-muted">Hey! Wassup</h2>
+          <h2 class="card-title mb-3 text-muted">
+            <fa-icon [icon]="['fas', 'umbrella-beach']" class="pe-1 text-success"></fa-icon>
+            Hey! Wassup
+          </h2>
           <p class="card-text">
             Login back to your super awesome <strong class="text-success">Seventeen App</strong>.
           </p>
@@ -21,10 +24,13 @@
               <input type="text" class="form-control" placeholder="Username" [(ngModel)]="username" />
             </div>
             <div class="mb-4">
-              <input type="text" class="form-control" placeholder="Password" [(ngModel)]="password" />
+              <input type="password" class="form-control" placeholder="Password" [(ngModel)]="password" />
             </div>
             <div class="d-grid gap-2">
-              <button class="btn btn-success" type="button" (click)="login()">Login</button>
+              <button class="btn btn-success" type="button" (click)="login()">
+                <fa-icon [icon]="['fas', 'sign-in']" class="pe-1"></fa-icon>
+                Login
+              </button>
             </div>
           </div>
         </div>

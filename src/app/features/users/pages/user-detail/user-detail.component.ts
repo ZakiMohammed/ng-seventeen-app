@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { UserService } from '../../services/user.service';
-import { Observable } from 'rxjs';
+import { Observable, catchError, of } from 'rxjs';
 import { User } from '../../models/user';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { UserDetailGroupComponent } from '../../components/user-detail-group/user-detail-group.component';
@@ -24,7 +24,7 @@ import { PageLoaderComponent } from '../../../../core/components/page-loader/pag
   styleUrl: './user-detail.component.scss',
 })
 export class UserDetailComponent implements OnInit {
-  user$!: Observable<User>;
+  user$!: Observable<User | null>;
 
   constructor(
     private route: ActivatedRoute,
@@ -32,6 +32,6 @@ export class UserDetailComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.user$ = this.userService.getById(this.route.snapshot.params['id']);
+    this.user$ = this.userService.getById(this.route.snapshot.params['id']).pipe(catchError(() => of(null)));;
   }
 }

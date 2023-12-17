@@ -15,15 +15,16 @@ Below shows list of new features:
 TODO:
 
 - Add shell and login [Done]
-- Add guard and API call
+- Add guard and API call [Done]
+- Add toaster [Done]
+- HTTP interceptor [Done]
+- Add global toaster [Done]
 - Add Bootstrap Icon and replace with FA
 - Add ESLint with Prettier rule
 - Add environment files
 - Folder Structure
 - Budgeting
-- Add global toaster
 - API caching
-- HTTP interceptor
 - Azure App Insight
 
 ## Run App

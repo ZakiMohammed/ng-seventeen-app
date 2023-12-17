@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { UserService } from '../../services/user.service';
-import { Observable } from 'rxjs';
+import { Observable, catchError, of } from 'rxjs';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { Router } from '@angular/router';
 import { User } from '../../models/user';
@@ -24,7 +24,7 @@ export class UserListComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.users$ = this.userService.getAll();
+    this.users$ = this.userService.getAll().pipe(catchError(() => of([])));
   }
 
   goToDetails(id: number) {

@@ -4,17 +4,13 @@ import { Injectable, signal } from '@angular/core';
   providedIn: 'root',
 })
 export class LoaderService {
-  private _loader = signal(false);
-
-  get loader() {
-    return this._loader;
-  }
+  loader = signal(false);
 
   show() {
-    this._loader.set(true);
+    this.loader.set(true);
   }
 
   hide() {
-    this._loader.set(false);
+    this.loader.set(false);
   }
 }

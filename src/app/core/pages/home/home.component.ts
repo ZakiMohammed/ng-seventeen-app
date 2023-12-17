@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrandIconComponent } from '../../components/brand-icon/brand-icon.component';
-import { LoaderService } from '../../services/loader.service';
 
 @Component({
   selector: 'app-home',
@@ -11,8 +10,4 @@ import { LoaderService } from '../../services/loader.service';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
-  constructor(loaderService: LoaderService) {
-    loaderService.show();
-    setTimeout(() => loaderService.hide(), 2000);
-  }
 }

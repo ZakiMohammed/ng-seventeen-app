@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { User } from '../../features/users/models/user';
-import { map } from 'rxjs';
+import { map, of } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
@@ -9,11 +10,25 @@ import { map } from 'rxjs';
 export class AuthService {
   private baseUrl = 'https://jsonplaceholder.typicode.com/users/';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private router: Router) {}
+
+  public get User() {
+    try {
+      const item = localStorage.getItem('user');
+      if (item) {
+        return JSON.parse(item) as User;
+      }
+    } catch (error) {}
+    return null;
+  }
 
   isLoggedIn(): boolean {
-    const user = localStorage.getItem('user');
-    return !!user;
+    return !!this.User;
+  }
+
+  logout() {
+    localStorage.clear();
+    this.router.navigate(['/login']);
   }
 
   login(username: string, password: string) {
@@ -26,5 +41,14 @@ export class AuthService {
         return user;
       })
     );
+  }
+
+  authorized() {
+    if (!this.User) {
+      return of(false);
+    }
+
+    const url = `${this.baseUrl}${this.User?.id}`;
+    return this.http.get<User>(url).pipe(map(user => !!user));
   }
 }
