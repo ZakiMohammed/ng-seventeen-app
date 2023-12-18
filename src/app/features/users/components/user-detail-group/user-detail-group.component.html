@@ -1,61 +1,63 @@
-<div class="list-group rounded-4">
-  <div class="list-group-item list-group-item-light py-3">
-    <strong class="text-secondary">Details</strong>
+@if (user) {
+  <div class="list-group rounded-4">
+    <div class="list-group-item list-group-item-light py-3">
+      <strong class="text-secondary">Details</strong>
+    </div>
+    <app-user-detail-item
+      class="list-group-item d-flex justify-content-between"
+      text="Email"
+      [value]="user.email"
+      [icon]="['far', 'envelope']"></app-user-detail-item>
+    <app-user-detail-item
+      class="list-group-item d-flex justify-content-between"
+      text="Username"
+      [value]="user.username"
+      [icon]="['fas', 'user-astronaut']"></app-user-detail-item>
+    <app-user-detail-item
+      class="list-group-item d-flex justify-content-between"
+      text="Phone"
+      [value]="user.phone"
+      [icon]="['fas', 'phone']"></app-user-detail-item>
+    <app-user-detail-item
+      class="list-group-item d-flex justify-content-between"
+      text="Website"
+      [value]="user.website"
+      [icon]="['fas', 'globe']"></app-user-detail-item>
+    <div class="list-group-item list-group-item-light py-3">
+      <strong class="text-secondary">Address</strong>
+    </div>
+    <app-user-detail-item
+      class="list-group-item d-flex justify-content-between"
+      text="Street"
+      [value]="user.address.street + ', ' + user.address.suite"
+      [icon]="['fas', 'street-view']"></app-user-detail-item>
+    <app-user-detail-item
+      class="list-group-item d-flex justify-content-between"
+      text="City"
+      [value]="user.address.city"
+      [icon]="['fas', 'city']"></app-user-detail-item>
+    <app-user-detail-item
+      class="list-group-item d-flex justify-content-between"
+      text="Zipcode"
+      [value]="user.address.zipcode"
+      [icon]="['fas', 'map-pin']"></app-user-detail-item>
+    <div class="list-group-item list-group-item-light py-3">
+      <strong class="text-secondary">Company</strong>
+    </div>
+    <app-user-detail-item
+      class="list-group-item d-flex justify-content-between"
+      text="Name"
+      [value]="user.company.name"
+      [icon]="['fas', 'industry']"></app-user-detail-item>
+    <app-user-detail-item
+      class="list-group-item d-flex justify-content-between"
+      text="Catch Phrase"
+      [value]="user.company.catchPhrase"
+      [icon]="['fas', 'quote-right']"></app-user-detail-item>
+    <app-user-detail-item
+      class="list-group-item d-flex justify-content-between"
+      text="Bs"
+      [value]="user.company.bs"
+      [icon]="['far', 'circle']"></app-user-detail-item>
   </div>
-  <app-user-detail-item
-    class="list-group-item d-flex justify-content-between"
-    text="Email"
-    [value]="user.email"
-    [icon]="['far', 'envelope']"></app-user-detail-item>
-  <app-user-detail-item
-    class="list-group-item d-flex justify-content-between"
-    text="Username"
-    [value]="user.username"
-    [icon]="['fas', 'user-astronaut']"></app-user-detail-item>
-  <app-user-detail-item
-    class="list-group-item d-flex justify-content-between"
-    text="Phone"
-    [value]="user.phone"
-    [icon]="['fas', 'phone']"></app-user-detail-item>
-  <app-user-detail-item
-    class="list-group-item d-flex justify-content-between"
-    text="Website"
-    [value]="user.website"
-    [icon]="['fas', 'globe']"></app-user-detail-item>
-  <div class="list-group-item list-group-item-light py-3">
-    <strong class="text-secondary">Address</strong>
-  </div>
-  <app-user-detail-item
-    class="list-group-item d-flex justify-content-between"
-    text="Street"
-    [value]="user.address.street + ', ' + user.address.suite"
-    [icon]="['fas', 'street-view']"></app-user-detail-item>
-  <app-user-detail-item
-    class="list-group-item d-flex justify-content-between"
-    text="City"
-    [value]="user.address.city"
-    [icon]="['fas', 'city']"></app-user-detail-item>
-  <app-user-detail-item
-    class="list-group-item d-flex justify-content-between"
-    text="Zipcode"
-    [value]="user.address.zipcode"
-    [icon]="['fas', 'map-pin']"></app-user-detail-item>
-  <div class="list-group-item list-group-item-light py-3">
-    <strong class="text-secondary">Company</strong>
-  </div>
-  <app-user-detail-item
-    class="list-group-item d-flex justify-content-between"
-    text="Name"
-    [value]="user.company.name"
-    [icon]="['fas', 'industry']"></app-user-detail-item>
-  <app-user-detail-item
-    class="list-group-item d-flex justify-content-between"
-    text="Catch Phrase"
-    [value]="user.company.catchPhrase"
-    [icon]="['fas', 'quote-right']"></app-user-detail-item>
-  <app-user-detail-item
-    class="list-group-item d-flex justify-content-between"
-    text="Bs"
-    [value]="user.company.bs"
-    [icon]="['far', 'circle']"></app-user-detail-item>
-</div>
+}

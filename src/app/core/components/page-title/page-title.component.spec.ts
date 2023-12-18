@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { FontAwesomeTestingModule } from '@fortawesome/angular-fontawesome/testing';
 import { PageTitleComponent } from './page-title.component';
 
 describe('PageTitleComponent', () => {
@@ -8,7 +8,7 @@ describe('PageTitleComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PageTitleComponent],
+      imports: [PageTitleComponent, FontAwesomeTestingModule],
     }).compileComponents();
 
     fixture = TestBed.createComponent(PageTitleComponent);

@@ -4,12 +4,13 @@ import { User } from '../../features/users/models/user';
 import { map, of } from 'rxjs';
 import { Router } from '@angular/router';
 import { MESSAGE_CONSTANTS } from '../constants/message.constant';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  private baseUrl = 'https://jsonplaceholder.typicode.com/users/';
+  private baseUrl = `${environment.API_URL}users/`;
 
   constructor(
     private http: HttpClient,

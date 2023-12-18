@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { BrandIconComponent } from './brand-icon.component';
+import { FontAwesomeTestingModule } from '@fortawesome/angular-fontawesome/testing';
 
 describe('BrandIconComponent', () => {
   let component: BrandIconComponent;
@@ -8,7 +8,7 @@ describe('BrandIconComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BrandIconComponent],
+      imports: [BrandIconComponent, FontAwesomeTestingModule],
     }).compileComponents();
 
     fixture = TestBed.createComponent(BrandIconComponent);

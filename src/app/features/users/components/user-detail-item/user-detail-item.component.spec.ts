@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { UserDetailItemComponent } from './user-detail-item.component';
+import { FontAwesomeTestingModule } from '@fortawesome/angular-fontawesome/testing';
 
 describe('UserDetailItemComponent', () => {
   let component: UserDetailItemComponent;
@@ -8,7 +8,7 @@ describe('UserDetailItemComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [UserDetailItemComponent],
+      imports: [UserDetailItemComponent, FontAwesomeTestingModule],
     }).compileComponents();
 
     fixture = TestBed.createComponent(UserDetailItemComponent);

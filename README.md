@@ -20,12 +20,11 @@ TODO:
 - HTTP interceptor [Done]
 - Add global toaster [Done]
 - Add ESLint with Prettier rule [Done]
-- Add environment files
-- Folder Structure
+- Add environment files [Done]
+- Add Bootstrap Icon and replace with FA
+- Azure App Insight
 - Budgeting
 - API caching
-- Azure App Insight
-- Add Bootstrap Icon and replace with FA
 
 ## Run App
 
@@ -174,4 +173,11 @@ Usage:
 ```
 <fa-icon icon="coffee"></fa-icon>
 <fa-icon [icon]="['fab', 'angular']" size="lg"></fa-icon>
+```
+
+## Git Changes
+
+```
+git config --global core.eol lf
+git config --global core.autocrlf input
 ```

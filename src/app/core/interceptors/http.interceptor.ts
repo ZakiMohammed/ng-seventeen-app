@@ -1,7 +1,7 @@
 import { HttpErrorResponse, HttpInterceptorFn, HttpStatusCode } from '@angular/common/http';
 import { inject } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
-import { AuthService } from './auth.service';
+import { AuthService } from '../services/auth.service';
 import { catchError, throwError } from 'rxjs';
 import { MESSAGE_CONSTANTS } from '../constants/message.constant';
 
