@@ -9,22 +9,6 @@ Below shows list of new features:
 - Control flows - @for, @if, @switch
 - Deferrable Views
 - Signals
-- SSR and SSG
-- New Lifecycle Hooks
-
-TODO:
-
-- Add shell and login [Done]
-- Add guard and API call [Done]
-- Add toaster [Done]
-- HTTP interceptor [Done]
-- Add global toaster [Done]
-- Add ESLint with Prettier rule [Done]
-- Add environment files [Done]
-- Add Bootstrap Icon and replace with FA
-- Azure App Insight
-- Budgeting
-- API caching
 
 ## Run App
 
